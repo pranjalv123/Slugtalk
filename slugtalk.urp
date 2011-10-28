@@ -1,0 +1,18 @@
+path META=/usr/local/lib/urweb/ur/meta
+library /usr/local/lib/urweb/ur/openid
+allow url http://localhost/style.css
+allow url http://localhost/*
+allow url /*
+allow url http://*
+allow url https://*
+rewrite all Slugtalk/*
+rewrite style Slugtalk/*
+database dbname=slugtalk
+sql slugtalk.sql
+prefix http://localhost:8080/
+
+$/openid/openidUser
+$/list
+auth
+vote
+slugtalk
